@@ -1,0 +1,140 @@
+@use '/src/app/theme.scss' as style;
+
+.reservation{
+  margin: 100px 0 50px 0;
+  .header,.description{
+    color: style.$base-color;
+  } 
+  .select-date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 50px 0;
+    height: 100px;
+    width: 100%;
+    background-color: style.$orange-color;
+    color: #fff;
+    .day-item{
+      margin: 0 20px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    .day-item-selected{
+      background-color: #ab7134;
+    }
+    .one-day{
+      display: flex ;
+      align-items: center;
+      flex-direction: column;
+      .day{
+        font-size: 30px;
+      }
+    }
+    .date-picker{
+      height: 50px;
+      font-size: 50px;
+      
+    }
+  }
+  .reservation-content{
+    .time{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: style.$base-color;
+      .time-select{
+        width: 80px;
+        margin: 0 5px;
+      }
+    }
+    h3{
+      color: style.$orange-color;
+    }
+    .quantity{
+      margin: 20px 0;
+      text-align: right;
+      color: style.$black-color;
+    }
+    .form{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h4{
+        color: style.$base-color;
+      }
+      
+      .input{
+        display: flex;
+        align-items: center;
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        .put{
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: solid 1px style.$base-color;
+          text-align:center;
+          color: style.$base-color;
+          font-size: 15px;
+        }
+        .icon{
+          color: style.$orange-color;
+          cursor: pointer;
+        }
+      }
+    }
+    .place{
+      margin: 50px 0;
+      display: flex;
+      justify-content: center;
+      .floor{
+        position: relative;
+        border-radius: 15px;
+        padding: 20px;
+        width: 80%;
+        background-color: #fff;
+        box-shadow: 0 0 6px rgb(0, 0, 0,20%);
+        color: style.$base-color;
+        img{
+          border-radius: 10px;
+          width: 100%
+          
+        }
+        .table-click{
+          position: absolute;
+          height: calc(100% - 40px);
+          width: calc(100% - 40px);
+          top: 20px;
+          z-index: 800;
+          .table{
+            position: absolute;
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            img{
+              width: 100%
+            }
+            .selectTable{
+              height: 100%;
+            }
+          }
+          
+        }
+        
+      }
+    }
+    
+    .action{
+      text-align: right;
+      margin: 20px 0;
+      .btn{
+        border-radius: 25px;
+      }
+    }
+  }
+}
+

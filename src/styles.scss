@@ -1,0 +1,21 @@
+@import './app/theme.scss';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+   height: 100%; 
+  }
+body { 
+  background-color: $background-color;
+  margin: 0; 
+  font-family: 'Roboto', sans-serif;
+  button,a{
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+
+

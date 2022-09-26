@@ -1,0 +1,159 @@
+
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+
+$base-color: #9F837E;
+$orange-color : #D8A065;
+$background-color : #EEE4DC;
+$black-color : #626262;
+$shadow-color : rgba(0, 0, 0, 0.160) ;
+$red-color : #FD5353;
+
+$palette: (
+  50 : #faf4ed,
+  100 : #f3e3d1,
+  200 : #ecd0b2,
+  300 : #e4bd93,
+  400 : #deae7c,
+  500 : #d8a065,
+  600 : #d4985d,
+  700 : #ce8e53,
+  800 : #c88449,
+  900 : #bf7337,
+  A100 : #ffffff,
+  A200 : #D8A065,
+  A400 : #D8A065,
+  A700 : #D8A065,
+  contrast: (
+      50 : #000,
+      100 : #000,
+      200 : #000,
+      300 : #000,
+      400 : #000,
+      500 : #000,
+      600 : #000,
+      700 : #fff,
+      800 : #fff,
+      900 : #fff,
+      A100 : #fff,
+      A200 : #fff,
+      A400 : #fff,
+      A700 : #9F837E,
+  ),
+);
+
+
+$mocha-coffee-primary: mat.define-palette($palette);
+$mocha-coffee-accent: mat.define-palette($palette, A200, A100, A400);
+
+
+$mocha-coffee-warn: mat.define-palette(mat.$red-palette);
+
+
+$mocha-coffee-theme: mat.define-light-theme((
+  color: (
+    primary: $mocha-coffee-primary,
+    accent: $mocha-coffee-accent,
+    warn: $mocha-coffee-warn,
+  )
+));
+
+
+@include mat.all-component-themes($mocha-coffee-theme);
+
+.view{
+  max-width: 1110px;
+  margin: auto;
+  padding: 0px 20px;
+  height: 100%;
+}
+
+.white-btn{
+  color: $base-color;
+  border: solid 2px #fff;
+  background-color: #fff;
+}
+.white-btn:hover{
+  color: #fff;
+  border: solid 2px #fff;
+  background-color: transparent;
+}
+
+.white-base-btn{
+  color: #fff;
+  border: solid 2px #fff;
+  background-color: transparent;
+}
+.white-base-btn:hover{
+  color: $base-color;
+  border: solid 2px #fff;
+  background-color: #fff;
+}
+
+.white-orange-btn{
+  color: $orange-color;
+  border: solid 2px $orange-color;
+  background-color: #fff;
+}
+.white-orange-btn:hover{
+  color: #fff;
+  border: solid 2px #fff;
+  background-color: $orange-color;
+}
+
+.orange-btn{
+  color: #fff;
+  background-color:  $orange-color;
+  border: solid 2px $orange-color ;
+}
+.orange-btn:hover{
+  color: $orange-color;
+  background-color:  transparent;
+  border: solid 2px $orange-color ;
+}
+
+.small-btn{
+  font-size: 20px;
+  font-weight: 700;
+  height: 35px;
+  border-radius: 20px;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+.extra-small-btn{
+  font-size: 15px;
+  font-weight: 600;
+  height: 30px;
+  border-radius: 15px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.larg-btn{
+  font-size: 25px;
+  font-weight: 700;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 40px;
+  cursor: pointer;
+}
+
+.vertical{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.horizontal{
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  padding: 50px;
+  border-radius: 50px;
+  position: relative ;
+}

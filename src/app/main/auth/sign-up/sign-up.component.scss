@@ -1,0 +1,91 @@
+@import '/src/app/theme.scss';
+
+.sign-up{
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-image: url('/assets/img/auth/Sign\ up\ background.png');
+  background-position: center;
+  background-size: cover;
+  .content{
+    justify-content: space-between;
+    .form{
+      position: relative;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color:#fff ;
+      border-radius: 7px;
+      padding: 20px;
+      height: 540px;
+      width: 340px;
+      padding: 20px;
+      .Personal-Information{
+        width: 100%;
+        .fildes{
+          display: flex;
+          justify-content: space-between;
+        mat-form-field{
+          width: 47%;
+        }
+        }
+      }
+      .Account-Security{
+        mat-form-field{
+          width: 100%;
+        }
+      }
+      div{
+        .title-form{
+          margin-bottom: 10px;
+        }
+        
+        a{
+          color: $orange-color;
+        }
+        
+      }
+      
+      
+      .links{
+        display: grid;
+        a{
+          color: $orange-color;
+        }
+      }
+      .submit-button{
+        text-align: center;
+        width: 100%;
+        button{
+          border-radius: 25px;
+        margin : 20px 0;
+        width: 80%;
+        }
+      }
+      img{
+        position: absolute;
+        bottom: -5px;
+        right: -35px;
+        height: 100px;
+      }
+    }
+    .title{
+      color: #fff;
+      font-size: 20px;
+      width: 450px;
+      h3{
+        color: #fff;
+        font-size: 50px;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+      p{
+        font-size: 15px;
+        span{
+          color: gray;
+        }
+      }
+    }
+    
+  }
+  
+}

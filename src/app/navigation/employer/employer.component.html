@@ -1,0 +1,36 @@
+<div class="employer">
+  <div class="employer-thumbnail">
+    <div class="view">
+      <h3>Good Day {{name}}</h3>
+      <img src="assets/mocha/yee.png" alt="">
+    </div>
+  </div>
+  <div class="view">
+    <div class="item employer-content">
+      <div class="head">
+        <div class="date">
+          {{toDay}}
+        </div>
+      </div>
+      <div *ngIf="!selected ; else notSelected" >
+        <div *ngIf="employer" class="stat">
+          <div class="welcom">
+            Welcome Back!
+          </div>
+          <div>
+            Today, you have served {{employer.today}} clients.
+          </div>
+          <div *ngIf="category == 'waitress'">
+            Tables Served : {{employer.total}}.
+          </div>
+          <div *ngIf="category == 'delivery employer'">
+            Client Served : {{employer.total}}.
+          </div>
+        </div>
+      </div>
+      <ng-template #notSelected>
+        <router-outlet></router-outlet>
+      </ng-template>
+    </div>
+  </div>
+</div>

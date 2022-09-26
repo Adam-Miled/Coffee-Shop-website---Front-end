@@ -1,0 +1,27 @@
+<div class="admin">
+  <div class="admin-thumbnail">
+    <div class="view">
+      <h3>Good Day Chef</h3>
+      <img src="assets/mocha/admin.png" alt="">
+    </div>
+  </div>
+  <div class="view">
+    <div class="item admin-content">
+      <div class="head">
+        <div class="date">
+          {{toDay}}
+        </div>
+      </div>
+      <div *ngIf="selected ; else notSelected">
+        <router-outlet></router-outlet>
+      </div>
+      <ng-template #notSelected>
+        <div class="notSelected">
+          <h1>Mocha Coffee</h1>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+  
+</div>
+

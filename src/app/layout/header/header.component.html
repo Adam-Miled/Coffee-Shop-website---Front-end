@@ -1,0 +1,4 @@
+<app-client *ngIf="role == null || role == 'client'"></app-client>
+<app-admin *ngIf="role == 'admin'"></app-admin>
+<app-employer *ngIf="role == 'employer'"></app-employer>
+<app-table *ngIf="role == 'table'"></app-table>

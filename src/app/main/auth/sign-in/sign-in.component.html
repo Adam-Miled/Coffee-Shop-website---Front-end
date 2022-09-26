@@ -1,0 +1,77 @@
+<div class="sign-in">
+  <div class="view">
+    <div class="content horizontal">
+      <div >
+        <form 
+          name="loginForm" 
+          [formGroup]="loginForm" 
+          class="form vertical">
+          <mat-form-field appearance="fill">
+            <mat-label>Email or Username</mat-label>
+            <input matInput formControlName="login" placeholder="Abc@mocha.com">
+            <mat-icon matSuffix class="secondary-text">mail</mat-icon>
+            <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+              Email is required
+            </mat-error>
+            <mat-error
+              *ngIf="!loginForm.get('email')?.hasError('required') &&
+                      loginForm.get('email')?.hasError('email')">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+  
+  
+          <mat-form-field appearance="fill">
+              <mat-label>Password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error>
+                  Password is required
+              </mat-error>
+          </mat-form-field>
+  
+          
+          <mat-checkbox class="remember-me" aria-label="Remember Me" formControlName="remember">
+              Keep me Signed in.
+          </mat-checkbox>
+          <div class="">
+
+          </div>
+          <div class="submit-button">
+            <button mat-raised-button color="accent"  (click)="Authenticate()"
+                  [disabled]="loginForm.invalid">
+              LOGIN
+          </button>
+          </div>
+          
+  
+          <div class="links">
+            <a class="forgot-password" [routerLink]="'/'">
+              Forgot you  username?
+            </a>
+    
+            <a class="forgot-password" [routerLink]="'/'">
+                Forgot you  Password?
+            </a>
+          </div>
+        </form>
+        <div class="go-to-signup vertical">
+          <h5>
+            STILL DON'T HAVE AN ACCOUNT?
+          </h5>
+          <p>
+            Join MochaCofe Rewards to eran free food and
+            drinks, get free refills, pay and order with your phone, and more
+          </p>
+          <a href="/auth/sign-up"><button>Join now</button></a>
+        </div>
+      </div>
+      <div class="title">
+        <H3>MOCHA COFFEE</H3>
+        <b>Sign in or create an account</b><br>MOCHACOFE MEMBERSHIP
+      </div>
+    </div>
+  </div>
+</div>

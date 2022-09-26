@@ -1,0 +1,84 @@
+@use '/src/app/theme.scss' as style ;
+
+.manage-employers{
+  .add-employer{
+    margin: 20px 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: style.$base-color;
+    p{
+      margin: 0 10px;
+    }
+  }
+  .data{
+    margin-top: 20px;
+    .action{
+      text-align: right;
+      margin: 10px 0;
+        .btn{
+          margin: 0 10px;
+          font-size: 13px;
+          font-weight: 500;
+          height: 20px;
+          border-radius: 15px;
+          padding: 0 20px;
+          cursor: pointer;
+          background-color: style.$red-color;
+          color: #fff;
+          border: solid 2px style.$red-color;
+        
+      }
+    }
+    .employer-Selected{
+      background-color: style.$base-color;
+      border-radius: 10px;
+      padding: 10px;
+      color: #fff;
+      .header{
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .content{
+        margin-top: 20px;
+      }
+    }
+    .noEmployer{
+      color: style.$base-color;
+      text-align: center;
+    }
+  }
+}
+
+.adding{
+  h3{
+    color: style.$base-color;
+  }
+  .Employer-Inputs{
+    display: flex;
+    align-items: flex-start;
+
+    .employer-left{
+      padding-right : 20px ;
+      border-right: solid 2px style.$orange-color;
+    }
+
+    .employer-right{
+      padding-left : 20px ;
+    }
+
+    div{
+      width: calc(50% - 20px);
+    }
+    mat-form-field{
+      width: 100%;
+    }
+  }
+
+  .action{
+    text-align: right;
+    margin: 10px 0;
+  }
+}
